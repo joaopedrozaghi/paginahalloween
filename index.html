@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0" />
+<meta name="theme-color" content="#1a0f2e" />
+<meta name="description" content="Kit Halloween Mágico: mais de 40 páginas de atividades infantis para imprimir. Livro de atividades, jogos, recorte e monte. Por R$ 19,90." />
+<title>Halloween Mágico · Kit de Atividades Infantis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="assets/capa-livro.jpg" fetchpriority="high" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Sprite de formas decorativas coloridas -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Abóbora -->
+    <symbol id="ic-pumpkin" viewBox="0 0 64 64">
+      <path d="M31 12c0-3 2-6 6-7-1 2-1 4 1 6" fill="none" stroke="#4caf50" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="32" cy="38" rx="21" ry="19" fill="#ff7a1a"/>
+      <ellipse cx="20" cy="38" rx="9" ry="18" fill="#ff8c3a" opacity=".7"/>
+      <ellipse cx="44" cy="38" rx="9" ry="18" fill="#ef6a00" opacity=".55"/>
+      <path d="M32 20v37" stroke="#e65c00" stroke-width="2.4" opacity=".5"/>
+      <path d="M24 24l-2 3M40 24l2 3" fill="none" stroke="#5a2b00" stroke-width="3" stroke-linecap="round"/>
+      <path d="M20 36l6-5 6 5 6-5 6 5" fill="none" stroke="#3a1a00" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M23 44q9 9 18 0q-9 5-18 0z" fill="#3a1a00"/>
+    </symbol>
+    <!-- Fantasma -->
+    <symbol id="ic-ghost" viewBox="0 0 64 64">
+      <path d="M32 7c11 0 18 8 18 19v27c0 2-2 3-4 2l-4-3-5 3c-1 .7-3 .7-4 0l-4-3-4 3c-1 .7-3 .7-4 0l-4-3-4 3c-2 1-4 0-4-2V26C14 15 21 7 32 7z" fill="#f6f1ff"/>
+      <circle cx="25" cy="26" r="3.4" fill="#2a1a4a"/>
+      <circle cx="39" cy="26" r="3.4" fill="#2a1a4a"/>
+      <circle cx="20" cy="33" r="3" fill="#ff9bb5" opacity=".7"/>
+      <circle cx="44" cy="33" r="3" fill="#ff9bb5" opacity=".7"/>
+      <ellipse cx="32" cy="34" rx="3.4" ry="4.6" fill="#2a1a4a"/>
+    </symbol>
+    <!-- Morcego -->
+    <symbol id="ic-bat" viewBox="0 0 64 64">
+      <path d="M32 24c2-5 5-7 7-6-1 1-1 3 0 4 3-4 8-6 13-5-3 2-4 5-4 8 2-1 5-1 7 1-4 0-6 2-7 5-3-4-9-5-13-3 2 2 2 5 0 7-2-2-2-5 0-7-4-2-10-1-13 3-1-3-3-5-7-5 2-2 5-2 7-1 0-3-1-6-4-8 5-1 10 1 13 5 1-1 1-3 0-4 2-1 5 1 7 6z" fill="#2a1a4a"/>
+      <circle cx="30" cy="25" r="1.3" fill="#ffb020"/>
+      <circle cx="34" cy="25" r="1.3" fill="#ffb020"/>
+    </symbol>
+    <!-- Lua -->
+    <symbol id="ic-moon" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="22" fill="#ffd36b"/>
+      <circle cx="24" cy="26" r="4" fill="#eaba4e" opacity=".6"/>
+      <circle cx="40" cy="36" r="6" fill="#eaba4e" opacity=".5"/>
+      <circle cx="33" cy="44" r="3" fill="#eaba4e" opacity=".6"/>
+    </symbol>
+    <!-- Aranha -->
+    <symbol id="ic-spider" viewBox="0 0 64 64">
+      <path d="M32 6v16" stroke="#2a1a4a" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="32" cy="38" r="11" fill="#2a1a4a"/>
+      <circle cx="32" cy="26" r="5" fill="#2a1a4a"/>
+      <path d="M21 32L10 24M21 38H8M21 44l-10 7M43 32l11-8M43 38h13M43 44l10 7" fill="none" stroke="#2a1a4a" stroke-width="2.6" stroke-linecap="round"/>
+      <circle cx="29" cy="25" r="1.5" fill="#ffb020"/>
+      <circle cx="35" cy="25" r="1.5" fill="#ffb020"/>
+    </symbol>
+    <!-- Chapéu de bruxa -->
+    <symbol id="ic-hat" viewBox="0 0 64 64">
+      <path d="M32 8l12 34H20z" fill="#6d28d9"/>
+      <path d="M28 30l12-4-2 7z" fill="#ffb020"/>
+      <ellipse cx="32" cy="44" rx="24" ry="7" fill="#5a1fb8"/>
+      <ellipse cx="32" cy="43" rx="24" ry="6" fill="#6d28d9"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<div class="app">
+
+  <!-- Aviso topo -->
+  <div class="announce">
+    <span class="announce__dot"></span>
+    <span>Oferta de lançamento · <strong>50% OFF</strong> só hoje</span>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero__aurora" aria-hidden="true"></div>
+    <div class="deco deco--dark" aria-hidden="true">
+      <span class="deco__shape s-1"><svg><use href="#ic-moon"/></svg></span>
+      <span class="deco__shape s-2"><svg><use href="#ic-bat"/></svg></span>
+      <span class="deco__shape s-4"><svg><use href="#ic-ghost"/></svg></span>
+      <span class="deco__shape s-5"><svg><use href="#ic-spider"/></svg></span>
+    </div>
+
+    <div class="hero__inner">
+      <div class="chip" data-magnet>
+        <span class="chip__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2"/><path d="M4 7h16v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7z"/><path d="M9 11h6M9 15h6"/></svg></span>
+        <span>Material digital para imprimir</span>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="line line--serif">O Halloween</span>
+        <span class="line line--display">mágico</span>
+        <span class="line line--sub">sem você planejar nada</span>
+      </h1>
+
+      <p class="hero__lead">
+        <strong>+40 páginas</strong> de atividades que prendem a criançada por horas.
+        Baixou, imprimiu, pronto.
+      </p>
+
+      <!-- Capa principal com tilt 3D -->
+      <figure class="showcase" id="showcase" data-tilt>
+        <img class="showcase__img" src="assets/capa-livro.jpg" width="1100" height="1005" fetchpriority="high" decoding="async" alt="Livro de Atividades de Halloween com páginas abertas" />
+        <span class="showcase__badge">+40<br><i>atividades</i></span>
+      </figure>
+
+      <button class="btn btn--primary ripple" data-scroll="#comprar">
+        <span>Quero meu kit por R$ 19,90</span>
+        <svg viewBox="0 0 24 24" class="btn__arrow"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <ul class="trust">
+        <li>Acesso imediato</li><li>Impressão ilimitada</li><li>Garantia de 7 dias</li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Caça-palavras</span><b>✦</b><span>Labirintos</span><b>✦</b><span>Colorir</span><b>✦</b>
+      <span>Jogo dos 7 erros</span><b>✦</b><span>Máscaras</span><b>✦</b><span>Ligue os pontos</span><b>✦</b>
+      <span>Caça-palavras</span><b>✦</b><span>Labirintos</span><b>✦</b><span>Colorir</span><b>✦</b>
+      <span>Jogo dos 7 erros</span><b>✦</b><span>Máscaras</span><b>✦</b><span>Ligue os pontos</span><b>✦</b>
+    </div>
+  </div>
+
+  <!-- O QUE VEM — abas + imagem real -->
+  <section class="section" id="kit">
+    <div class="deco deco--light" aria-hidden="true">
+      <span class="deco__shape s-1"><svg><use href="#ic-pumpkin"/></svg></span>
+      <span class="deco__shape s-2"><svg><use href="#ic-ghost"/></svg></span>
+      <span class="deco__shape s-4"><svg><use href="#ic-bat"/></svg></span>
+      <span class="deco__shape s-6"><svg><use href="#ic-spider"/></svg></span>
+    </div>
+    <span class="eyebrow">Dentro do kit</span>
+    <h2 class="h2">Três livros, <span class="ink-orange">uma coleção completa</span></h2>
+
+    <div class="tabs">
+      <div class="tabs__nav" role="tablist">
+        <button class="tab is-active ripple" data-tab="0"><b>01</b> Atividades</button>
+        <button class="tab ripple" data-tab="1"><b>02</b> Jogos</button>
+        <button class="tab ripple" data-tab="2"><b>03</b> Recorte</button>
+      </div>
+
+      <div class="tabs__stage">
+        <article class="slide is-active" data-panel="0">
+          <figure class="slide__media" data-lightbox>
+            <img src="assets/capa-livro.jpg" width="1100" height="1005" loading="lazy" decoding="async" alt="Livro de Atividades de Halloween" />
+            <span class="slide__zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4-4M11 8v6M8 11h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          </figure>
+          <div class="slide__body">
+            <h3>Livro de Atividades</h3>
+            <p>Vamos colorir, ajude o fantasma, caça-palavras e encontre as diferenças com personagens fofos.</p>
+            <ul class="ticks"><li>Colorir temático</li><li>Labirintos</li><li>Caça-palavras</li></ul>
+          </div>
+        </article>
+
+        <article class="slide" data-panel="1">
+          <figure class="slide__media" data-lightbox>
+            <img src="assets/capa-jogos.jpg" width="1100" height="733" loading="lazy" decoding="async" alt="Jogos e Desafios Temáticos" />
+            <span class="slide__zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4-4M11 8v6M8 11h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          </figure>
+          <div class="slide__body">
+            <h3>Jogos & Desafios</h3>
+            <p>Labirintos, ligue os pontos e desafios que estimulam foco e raciocínio de um jeito divertido.</p>
+            <ul class="ticks"><li>Ligue os pontos</li><li>7 diferenças</li><li>Desafios</li></ul>
+          </div>
+        </article>
+
+        <article class="slide" data-panel="2">
+          <figure class="slide__media" data-lightbox>
+            <img src="assets/recorte-monte.jpg" width="896" height="1178" loading="lazy" decoding="async" alt="Kit Recorte e Monte com máscara" />
+            <span class="slide__zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4-4M11 8v6M8 11h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          </figure>
+          <div class="slide__body">
+            <h3>Recorte & Monte</h3>
+            <p>Máscaras e enfeites para recortar, montar e brincar. Diversão com as mãos, longe das telas.</p>
+            <ul class="ticks"><li>Máscaras</li><li>Enfeites</li><li>Monte você mesmo</li></ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIFESTYLE / prova visual -->
+  <section class="section section--dark lifestyle">
+    <div class="deco deco--dark" aria-hidden="true">
+      <span class="deco__shape s-1"><svg><use href="#ic-moon"/></svg></span>
+      <span class="deco__shape s-3"><svg><use href="#ic-pumpkin"/></svg></span>
+      <span class="deco__shape s-2"><svg><use href="#ic-bat"/></svg></span>
+      <span class="deco__shape s-6"><svg><use href="#ic-ghost"/></svg></span>
+    </div>
+    <span class="eyebrow eyebrow--light">Momentos de verdade</span>
+    <h2 class="h2 h2--light">Horas de diversão <span class="ink-orange">longe das telas</span></h2>
+    <div class="gallery">
+      <figure class="gallery__item big" data-lightbox>
+        <img src="assets/criancas-pintando.jpg" width="935" height="932" loading="lazy" decoding="async" alt="Crianças fantasiadas colorindo juntas no chão" />
+        <figcaption class="gallery__cap">Colorindo em família</figcaption>
+      </figure>
+      <figure class="gallery__item" data-lightbox>
+        <img src="assets/criancas-mesa.jpg" width="1400" height="1400" loading="lazy" decoding="async" alt="Crianças pintando a toalha gigante de Halloween" />
+        <figcaption class="gallery__cap">Toalha gigante</figcaption>
+      </figure>
+      <figure class="gallery__item" data-lightbox>
+        <img src="assets/recorte-monte.jpg" width="896" height="1178" loading="lazy" decoding="async" alt="Criança montando a máscara do kit recorte e monte" />
+        <figcaption class="gallery__cap">Recorte e monte</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="section">
+    <div class="deco deco--light" aria-hidden="true">
+      <span class="deco__shape s-2"><svg><use href="#ic-hat"/></svg></span>
+      <span class="deco__shape s-3"><svg><use href="#ic-ghost"/></svg></span>
+      <span class="deco__shape s-5"><svg><use href="#ic-bat"/></svg></span>
+    </div>
+    <span class="eyebrow">Por que os pais amam</span>
+    <h2 class="h2">Diversão de verdade, <span class="ink-purple">zero dor de cabeça</span></h2>
+    <div class="perks">
+      <div class="perk" data-tilt>
+        <span class="perk__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg></span>
+        <b>Pronto em segundos</b><p>Baixe, imprima e entregue.</p>
+      </div>
+      <div class="perk" data-tilt>
+        <span class="perk__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/><path d="M3 3l18 18"/></svg></span>
+        <b>Sem tempo de tela</b><p>Horas longe do celular.</p>
+      </div>
+      <div class="perk" data-tilt>
+        <span class="perk__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2a3.5 3.5 0 0 0-3.5 3.5c-1.4.3-2.5 1.5-2.5 3 0 .8.3 1.5.8 2-.5.5-.8 1.2-.8 2 0 1.6 1.3 3 3 3 .3 1.4 1.5 2.5 3 2.5V2h-.5z"/><path d="M14.5 2a3.5 3.5 0 0 1 3.5 3.5c1.4.3 2.5 1.5 2.5 3 0 .8-.3 1.5-.8 2 .5.5.8 1.2.8 2 0 1.6-1.3 3-3 3-.3 1.4-1.5 2.5-3 2.5V2h.5z"/></svg></span>
+        <b>Educativo</b><p>Foco, leitura e criatividade.</p>
+      </div>
+      <div class="perk" data-tilt>
+        <span class="perk__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg></span>
+        <b>Imprima à vontade</b><p>Um filho ou a turma toda.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTA -->
+  <section class="section offer" id="comprar">
+    <div class="deco deco--dark" aria-hidden="true">
+      <span class="deco__shape s-1"><svg><use href="#ic-pumpkin"/></svg></span>
+      <span class="deco__shape s-2"><svg><use href="#ic-moon"/></svg></span>
+      <span class="deco__shape s-3"><svg><use href="#ic-ghost"/></svg></span>
+      <span class="deco__shape s-4"><svg><use href="#ic-bat"/></svg></span>
+    </div>
+    <div class="offer__card" data-tilt>
+      <span class="offer__ribbon">Oferta por tempo limitado</span>
+      <h2 class="offer__title">Kit Halloween Mágico</h2>
+      <p class="offer__desc">Os 3 livros completos + bônus, em PDF para imprimir.</p>
+
+      <ul class="offer__items">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l5 5 11-11" transform="translate(0 6)"/></svg> Livro de atividades · +40 páginas</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l5 5 11-11" transform="translate(0 6)"/></svg> Jogos e desafios temáticos</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l5 5 11-11" transform="translate(0 6)"/></svg> Recorte e monte (máscaras)</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l5 5 11-11" transform="translate(0 6)"/></svg> Bônus: convites, placas e marcadores</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l5 5 11-11" transform="translate(0 6)"/></svg> Impressão ilimitada · uso vitalício</li>
+      </ul>
+
+      <div class="offer__price">
+        <span class="offer__old">R$ 39,90</span>
+        <span class="offer__now"><i>R$</i>19<sup>,90</sup></span>
+        <span class="offer__save">-50%</span>
+      </div>
+
+      <div class="timer" id="timer">
+        <span class="timer__label">A oferta expira em</span>
+        <div class="timer__clock">
+          <div><b id="th">00</b><small>horas</small></div><span>:</span>
+          <div><b id="tm">00</b><small>min</small></div><span>:</span>
+          <div><b id="ts">00</b><small>seg</small></div>
+        </div>
+      </div>
+
+      <button class="btn btn--primary btn--block ripple" id="buyBtn">
+        <span class="buyBtn__label">Comprar agora</span>
+      </button>
+      <div class="pay">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <span>Pagamento seguro</span><i>·</i><span>Pix · Cartão · Boleto</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTIA -->
+  <section class="section guarantee">
+    <div class="guarantee__seal"><b>7</b><small>DIAS</small></div>
+    <div><h3>Risco zero pra você</h3><p>Não amou? Devolvemos 100% do seu dinheiro em até 7 dias. Simples assim.</p></div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--soft">
+    <div class="deco deco--light" aria-hidden="true">
+      <span class="deco__shape s-1"><svg><use href="#ic-ghost"/></svg></span>
+      <span class="deco__shape s-4"><svg><use href="#ic-pumpkin"/></svg></span>
+    </div>
+    <span class="eyebrow">Dúvidas frequentes</span>
+    <h2 class="h2">Tudo o que você precisa saber</h2>
+    <div class="faq" id="faq">
+      <div class="qa"><button class="qa__q ripple">Como eu recebo o material?<i class="qa__plus"></i></button><div class="qa__a"><p>É 100% digital. Após a compra você recebe o acesso para baixar os PDFs e imprimir em casa ou numa gráfica.</p></div></div>
+      <div class="qa"><button class="qa__q ripple">Para qual idade é indicado?<i class="qa__plus"></i></button><div class="qa__a"><p>Ideal para crianças de 3 a 10 anos, com níveis variados de dificuldade.</p></div></div>
+      <div class="qa"><button class="qa__q ripple">Posso imprimir mais de uma vez?<i class="qa__plus"></i></button><div class="qa__a"><p>Sim, a impressão é ilimitada. Use com um filho, os primos ou a turma inteira.</p></div></div>
+      <div class="qa"><button class="qa__q ripple">Preciso de algum programa especial?<i class="qa__plus"></i></button><div class="qa__a"><p>Não. Basta um leitor de PDF comum e uma impressora.</p></div></div>
+      <div class="qa"><button class="qa__q ripple">E se eu não gostar?<i class="qa__plus"></i></button><div class="qa__a"><p>Você tem 7 dias de garantia total. Não gostou? Reembolso na hora.</p></div></div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="deco deco--dark" aria-hidden="true">
+      <span class="deco__shape s-3"><svg><use href="#ic-pumpkin"/></svg></span>
+      <span class="deco__shape s-2"><svg><use href="#ic-bat"/></svg></span>
+    </div>
+    <div class="foot__logo serif">Halloween Mágico</div>
+    <p>© <span id="year"></span> · Todos os direitos reservados.</p>
+    <p class="foot__fine">Página de demonstração. Troque o botão de compra pelo seu checkout.</p>
+  </footer>
+
+  <div class="app__spacer"></div>
+</div>
+
+<!-- Dock -->
+<div class="dock" id="dock">
+  <div class="dock__price"><small>Kit completo</small><b>R$ 19,90</b></div>
+  <button class="btn btn--primary ripple" id="dockBtn"><span>Comprar</span></button>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">✕</button>
+  <img id="lightboxImg" alt="" />
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="toast__msg">Redirecionando…</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
