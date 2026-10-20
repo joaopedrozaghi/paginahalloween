@@ -222,11 +222,31 @@ sup{font-size:.5em;top:-.6em}
 .qa__a p{padding:0 1.1rem 1.1rem;color:var(--muted);font-size:.92rem}
 
 /* ===== Footer ===== */
-.foot{position:relative;overflow:hidden;isolation:isolate;background:var(--violet-900);color:#cdb8ea;text-align:center;padding:2.2rem 1.3rem}
+.foot{position:relative;overflow:hidden;isolation:isolate;background:var(--violet-900);color:#b9a7d6;text-align:left;padding:2.4rem 1.4rem 1.8rem}
 .foot > :not(.deco){position:relative;z-index:1}
-.foot__logo{font-size:1.3rem;color:#fff;margin-bottom:.5rem}
-.foot p{font-size:.82rem;opacity:.75}
-.foot__fine{font-size:.72rem;opacity:.45;margin-top:.5rem}
+.foot__top{display:flex;flex-direction:column;gap:1.4rem}
+.foot__logo-row{display:flex;align-items:center;gap:.6rem;margin-bottom:.7rem}
+.foot__mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(145deg,var(--orange-soft),var(--orange));color:#2a1140;font-family:'Poppins',sans-serif;font-weight:800;font-size:1.2rem;display:grid;place-items:center;box-shadow:0 6px 14px rgba(255,106,0,.35)}
+.foot__name{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:.5px;color:#fff}
+.foot__desc{font-size:.9rem;line-height:1.5;max-width:42ch;color:#b9a7d6;opacity:.9}
+.foot__support{margin-top:.9rem;font-size:.9rem;display:flex;align-items:center;gap:.5rem;color:#d8c9f0}
+.foot__support-ico{color:var(--orange-soft);display:inline-flex}
+.foot__support-ico svg{width:17px;height:17px}
+.foot__support a{color:var(--orange-soft);font-weight:700}
+.foot__support a:hover{text-decoration:underline}
+.foot__nav{display:flex;flex-wrap:wrap;gap:.9rem 1.4rem;align-items:center}
+.foot__nav a{font-size:.9rem;font-weight:600;color:#cdb8ea;transition:color .2s}
+.foot__nav a:hover{color:#fff}
+.foot__nav .foot__cta{color:var(--gold);font-weight:700}
+.foot__divider{height:1px;background:rgba(255,255,255,.1);margin:1.6rem 0}
+.foot__bottom{display:flex;flex-direction:column;gap:.9rem}
+.foot__copy{font-size:.8rem;color:#9d8cc0}
+.foot__legal{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem;font-size:.8rem}
+.foot__legal a{color:#b9a7d6;transition:color .2s}
+.foot__legal a:hover{color:#fff}
+.foot__dot{width:4px;height:4px;border-radius:50%;background:var(--purple-2);display:inline-block}
+.foot__badge{display:inline-flex;align-items:center;gap:.4rem;color:#8ae0a6;font-weight:600}
+.foot__badge svg{width:16px;height:16px}
 
 /* ===== Dock ===== */
 .dock{position:fixed;left:50%;bottom:0;transform:translateX(-50%) translateY(120%);width:min(480px,100%);z-index:100;display:flex;align-items:center;gap:.9rem;background:rgba(22,8,38,.88);backdrop-filter:blur(14px) saturate(1.3);border-top:1px solid rgba(255,255,255,.1);padding:.7rem 1rem;padding-bottom:calc(.7rem + env(safe-area-inset-bottom));transition:transform .4s var(--ease)}
@@ -323,7 +343,10 @@ sup{font-size:.5em;top:-.6em}
   .faq{max-width:820px;margin-inline:auto}
   .qa__q{font-size:1.08rem;padding:1.3rem 1.5rem}
 
-  .foot{padding:3rem}
+  .foot{padding:3rem 3.5rem 2.2rem;max-width:1200px;margin-inline:auto}
+  .foot__top{flex-direction:row;justify-content:space-between;align-items:flex-start;gap:2rem}
+  .foot__nav{justify-content:flex-end;max-width:60%}
+  .foot__bottom{flex-direction:row;justify-content:space-between;align-items:center}
 
   /* O dock fixo não é necessário no desktop (o CTA do hero já aparece) */
   .dock{display:none}

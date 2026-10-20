@@ -152,8 +152,8 @@
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLB(); });
 
   /* ---------- Compra ---------- */
-  // 🔧 Troque pela URL do seu checkout (Hotmart/Kiwify/Eduzz…)
-  const CHECKOUT_URL = '#';
+  // URL do checkout
+  const CHECKOUT_URL = 'https://pay.cakto.com.br/brs63gy_1221943';
   const toast = $('#toast');
   const showToast = (m) => { if (!toast) return; if (m) $('.toast__msg', toast).textContent = m; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2600); };
   const doBuy = (btn) => {
